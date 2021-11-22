@@ -1,0 +1,72 @@
+<!-- Navbar Component -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">.c1-ui-state-hover {background-color:yellow !important; padding:5px !important }</style></head><body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Diamond Personnel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span class="navbar-text">This site is under construction</span>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ditechcdm.github.io/QES-Diamond-Personnel-Backup.github.io/Assets/include/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ditechcdm.github.io/QES-Diamond-Personnel-Backup.github.io/Assets/include/services.html">Services</a>
+                </li>
+                <li class="nav-item dropdown mb-negative">
+                    <span class="nav-link">
+                        <a href="#">Industries</a>
+                        <a class="dropdown-toggle rotate" href="#" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-chevron-down icon-rotates"></i></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown">
+                            <li><a class="dropdown-item" href="#">Legal</a></li>
+                            <li><a class="dropdown-item" href="#">Scientific</a></li>
+                            <li><a class="dropdown-item" href="#">Financial</a></li>
+                            <li><a class="dropdown-item" href="#">Creative</a></li>
+                        </ul>
+                    </span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Job Listing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar component ends here -->
+
+
+<!-- Caret Rotation script -->
+<script type="text/javascript">
+    $('.rotate').click(function () {
+
+        if ($(this).css("transform") == 'none') {
+            $(this).children().css({ 'transform': 'rotate(180deg)', 'transition': '.3s ease-in' });
+        } else {
+            $(this).children().css('transform', 'none');
+        }
+
+    });
+    $(".dropdown").on("hidden.bs.dropdown", function () {
+        $(this).find('.rotate').children().css('transform', 'none');
+    });
+</script>
+
+<!-- Active link script -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.each($('#nav').find('li'), function () {
+            $(this).toggleClass('active',
+                window.location.pathname.indexOf($(this).find('a').attr('href')) > -1);
+        });
+    });
+</script>
+</body></html>
